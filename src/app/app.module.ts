@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 import { CamelCasePipe } from './camel-case.pipe';
 import { SettingsService } from './settings.service';
-import { FilterArrayPipe } from './filter-array.pipe'
+import { FilterArrayPipe } from './filter-array.pipe';
+import { PipeImpuroPipe } from './pipe-impuro.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
     CamelCasePipe,
-    FilterArrayPipe
+    FilterArrayPipe,
+    PipeImpuroPipe
   ],
   imports: [
     BrowserModule
