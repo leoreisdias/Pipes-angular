@@ -18,6 +18,12 @@ export class ExemplosPipesComponent implements OnInit {
 
   livros: any = ["angular2", 'java']
 
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor assíncrono'), 2000)
+  })
+
+
+
   constructor() { }
 
   ngOnInit(): void {
