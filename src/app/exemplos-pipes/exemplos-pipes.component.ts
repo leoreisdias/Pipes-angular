@@ -16,6 +16,8 @@ export class ExemplosPipesComponent implements OnInit {
     url: "link aqui"
   }
 
+  livros: any = ["angular2", 'java']
+
   constructor() { }
 
   ngOnInit(): void {

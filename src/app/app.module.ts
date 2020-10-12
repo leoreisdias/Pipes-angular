@@ -4,28 +4,30 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 import { CamelCasePipe } from './camel-case.pipe';
-import { SettingsService } from './settings.service'
+import { SettingsService } from './settings.service';
+import { FilterArrayPipe } from './filter-array.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
-    CamelCasePipe
+    CamelCasePipe,
+    FilterArrayPipe
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    SettingsService,
-    {
-      provide: LOCALE_ID,
-      deps: [SettingsService],
-      useFactory: (settingsService) => settingsService.getLocale()
-    }
+    // SettingsService,
     // {
     //   provide: LOCALE_ID,
-    //   useValue: 'pt-BR',
+    //   deps: [SettingsService],
+    //   useFactory: (settingsService) => settingsService.getLocale()
     // }
+    // // {
+    // //   provide: LOCALE_ID,
+    // //   useValue: 'pt-BR',
+    // // }
   ],
   bootstrap: [AppComponent]
 })
